@@ -3,31 +3,27 @@
 # =========================================
 *
 !*/
-pywin32_postinstall.py
-pywin32_testall.py
+
 # =========================================
-# But DO NOT ignore these files
+# But DO NOT ignore these files (Exceptions)
 # =========================================
-# Keep all Python files
 !*.py
-
-# Keep all Jupyter Notebook files
 !*.ipynb
-
-# Keep the README file
 !/README.md
-
-# Keep this .gitignore file itself
 !/.gitignore
 
 # =========================================
-# Standard Python ignores (optional but recommended)
+# Standard Python & Specific File Ignores
 # =========================================
-# Python cache and bytecode files
+# Python cache and bytecode
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# pywin32 installation scripts
+pywin32_postinstall.py
+pywin32_testall.py
 
 # Distribution / packaging
 .Python
