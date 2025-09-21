@@ -5,6 +5,7 @@ import torch
 import torchvision
 from torchvision import transforms
 from image_enhance import Enhancer
+import random
 #Custom dataloader object that takes in batch size and train-test split size upon init
 #when called will create a test set and trainset
 #get item returns a batch of  "IMAGES"
@@ -20,6 +21,12 @@ class Loader:
         raw_paths = sorted([os.path.join(raw_dir,fname) for fname in os.listdir(raw_dir) if fname.endswith((".jpg",".png"))])
         ref_paths = sorted([os.path.join(ref_dir,fname) for fname in os.listdir(ref_dir) if fname.endswith((".jpg",".png"))])
         ###train-test split
+
+        paired_paths = list(zip(raw_paths, ref_paths))
+        # 2. Shuffle the list of pairs randomly
+        random.shuffle(paired_paths)
+        # 3. Unzip the shuffled pairs back into separate lists
+        raw_paths, ref_paths = zip(*paired_paths)
         
         train_raw = raw_paths[:int(self.train_split*len(raw_paths))] 
         test_raw = raw_paths[int(self.train_split*len(raw_paths)):]

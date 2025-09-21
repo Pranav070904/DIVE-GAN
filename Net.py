@@ -60,7 +60,8 @@ class Generator(nn.Module): # Takes in 4 Tenors(1 of shape B,12,W,H and 3 of sha
         x1cm,x2cm,x3cm = self.cm(combined)
         output = torch.mul(x1,x1cm) + torch.mul(x2,x2cm) + torch.mul(x3,x3cm)
 
-        return output
+        return F.tanh(output)
+
 
 '''Credit for the Discriminator Model:
         GitHub:xahidbuffon/FUnIE-GAN'''
