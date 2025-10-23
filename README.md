@@ -131,36 +131,12 @@ This repository builds upon ideas from the following works:
 
 ---
 
-##  Citation
-
-If you use this work or find it useful in your research, please cite:
-```bibtex
-@misc{pranav2025divegan,
-  title     = {DIVE-GAN: A GAN-based Underwater Image Enhancement Framework Integrating Classical Priors and Perceptual Loss},
-  author    = {Pranav S.},
-  year      = {2025},
-  howpublished = {\url{github.com/Pranav070904/DIVE-GAN}},
-  note      = {Ongoing research, IEEE Access submission.}
-}
-```
-
----
-
 ##  License
 
 This repository is released under the **MIT License**.
 See [LICENSE](LICENSE) for details.
 
 Parts of this implementation draw conceptual inspiration from **WaterNet** and **FUnIE-GAN**, whose works are acknowledged above.
-
----
-
-##  Contact
-
-For research correspondence or collaboration inquiries, contact:
-**Pranav S.** – *Undergraduate Researcher, Computer Science (AI & Robotics)*
- *[pranav070904@gmail.com.com](mailto:pranav070904@gmail.com)*
-GitHub: [@Pranav070904](https://github.com/Pranav070904)
 
 ---
 
