@@ -8,7 +8,7 @@ This repository accompanies an **ongoing research paper**.
 
 ##  Overview
 
-The proposed **DIVE-GAN (Deep Integration of Visual Enhancements)** model draws inspiration from **WaterNet (CVPR 2019)** and **FUnIE-GAN (IEEE RA-L 2020)**, improving upon both by fusing classical image priors with perceptual learning.
+The proposed **DIVE-GAN (Deep Image Visual Enhancements)** model draws inspiration from **WaterNet (CVPR 2019)** and **FUnIE-GAN (IEEE RA-L 2020)**, improving upon both by fusing classical image priors with perceptual learning.
 
 DIVE-GAN was evaluated on multiple underwater image datasets, including **UIEB**, **EUVP**, and additional real-world footage captured in chlorinated pool environments.  
 The model achieves **higher SSIM and PSNR** compared to prior works while maintaining structural fidelity under domain shifts.
