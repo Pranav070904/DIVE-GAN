@@ -89,7 +89,7 @@ class VGG19_PerceptLoss_Multi(nn.Module):
         self.vgg = models.vgg19(weights=models.VGG19_Weights.DEFAULT).features.to(device)
         # Define the layers you want to use for the loss
         if layers is None:
-            # A common and effective set of layers
+            
             self.layers = {'8': 'relu2_2', '17': 'relu3_4', '26': 'relu4_4', '35': 'relu5_4'}
         else:
             self.layers = layers
@@ -97,7 +97,7 @@ class VGG19_PerceptLoss_Multi(nn.Module):
         for param in self.vgg.parameters():
             param.requires_grad_(False)
         
-        # Set to evaluation mode
+        
         self.vgg.eval()
     
     def get_features(self, image):
@@ -106,7 +106,7 @@ class VGG19_PerceptLoss_Multi(nn.Module):
         # Iterate through the VGG layers
         for name, layer in self.vgg._modules.items():
             x = layer(x)
-            # If this layer is one we want to capture, save its output
+            
             if name in self.layers:
                 features[self.layers[name]] = x
         return features
@@ -153,7 +153,7 @@ class GANLoss_Multi:
             D_fake: discriminator output for fake images
             target: ground truth images
         """
-        # Adversarial loss - want discriminator to think fake images are real
+       
         loss_adv = self.advLoss(D_fake, torch.ones_like(D_fake))
         
         # Pixel-wise loss
@@ -180,14 +180,14 @@ class GANLoss_Multi:
             pred_real: discriminator output for real images
             pred_fake: discriminator output for fake images
         """
-        # Use label smoothing for better training stability
+       
         valid = torch.full_like(pred_real, 0.9, device=self.dev)
         fake = torch.full_like(pred_fake, 0.0, device=self.dev)
         
         loss_real = self.advLoss(pred_real, valid)
         loss_fake = self.advLoss(pred_fake, fake)
 
-        # Average the losses
+        
         lossD = 0.5 * (loss_real + loss_fake)
         
         return lossD, {

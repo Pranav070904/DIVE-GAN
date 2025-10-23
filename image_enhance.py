@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 from PIL import Image
-import torch 
+
 
 
 #Applies 3 rudementary image enhancements and returns 3 images.
@@ -29,5 +29,5 @@ class Enhancer:
         img3 = self.en3(img)
 
         return Image.fromarray(img1),Image.fromarray(img2),Image.fromarray(img3)
-        #tensor = torch.hstack(ImageToTensor(img1),ImageToTensor(img2),ImageToTensor(img3))
+        
     

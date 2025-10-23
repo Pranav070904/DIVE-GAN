@@ -23,9 +23,7 @@ class Loader:
         ###train-test split
 
         paired_paths = list(zip(raw_paths, ref_paths))
-        # 2. Shuffle the list of pairs randomly
         random.shuffle(paired_paths)
-        # 3. Unzip the shuffled pairs back into separate lists
         raw_paths, ref_paths = zip(*paired_paths)
         
         train_raw = raw_paths[:int(self.train_split*len(raw_paths))] 

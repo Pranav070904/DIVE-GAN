@@ -1,51 +1,33 @@
-# =========================================
 # Ignore everything by default
-# =========================================
 *
-!*/
 
-# =========================================
-# But DO NOT ignore these files (Exceptions)
-# =========================================
-!*.py
-!*.ipynb
-!/README.md
-!/.gitignore
+# Allow specific Python files
+!DataUtils.py
+!gen_dataset.py
+!image_enhance.py
+!loss_functions.py
+!Net.py
+!resizeandpad.py
+!train_pipeline.ipynb
 
-# =========================================
-# Standard Python & Specific File Ignores
-# =========================================
-# Python cache and bytecode
+# Allow specific documentation and config files
+!LICENSE
+!requirements.txt
+!README.md
+
+# Allow the Figures directory and its contents
+!Figures/
+!Figures/**
+
+!Final_Weights/
+!Final_Weights/** 
+
+# Allow .gitignore itself
+!.gitignore
+!README.MD
+# Explicitly ignore common unwanted files even if they match above patterns
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# pywin32 installation scripts
-pywin32_postinstall.py
-pywin32_testall.py
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Mypy, Pyre, Pytype, and other static analysis caches
-.mypy_cache/
-.pyre/
-.pytype/
+.DS_Store
