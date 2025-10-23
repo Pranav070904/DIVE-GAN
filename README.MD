@@ -1,4 +1,4 @@
-#  DIVE-GAN: Deep Integration of Visual Enhancements for Underwater Image Restoration
+#  DIVE-GAN: Deep Image Visual Enhancements for Underwater Image Restoration
 
 DIVE-GAN is a **GAN-based underwater image enhancement framework** that integrates **classical enhancement priors** (Gamma Correction, Histogram Equalization, and White Balance) within a **multi-branch CNN generator**.  
 The generator refines these enhancements through learned confidence maps, while a **PatchGAN-style discriminator** ensures perceptual realism.  
