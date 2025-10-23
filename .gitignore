@@ -24,7 +24,6 @@
 
 # Allow .gitignore itself
 !.gitignore
-!README.MD
 # Explicitly ignore common unwanted files even if they match above patterns
 __pycache__/
 *.pyc
