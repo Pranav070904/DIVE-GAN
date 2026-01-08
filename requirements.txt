@@ -1,5 +1,5 @@
 numpy>=1.21
 Pillow>=9.0
-opencv-python>=4.5S
+opencv-python>=4.5
 tqdm>=4.64
 ipython>=8.0
